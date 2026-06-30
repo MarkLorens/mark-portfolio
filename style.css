@@ -122,6 +122,26 @@ header {
   row-gap: 1rem;
 }
 
+.hero-bg-radial-container {
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+  opacity: 0.2;
+}
+
+.hero-bg-radial-blur {
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+  opacity: 0.1;
+  background: radial-gradient(
+    circle at 70% 30%,
+    rgb(0, 82, 255) 0%,
+    transparent 60%
+  );
+  filter: blur(80px);
+}
+
 .hero-main p {
   font-family: var(--font-label);
   color: rgb(183 196 255);
@@ -170,7 +190,7 @@ header {
 
 /* Terminal Section */
 #Terminal {
-  animation-delay: 0.2;
+  animation-delay: 0.2s;
   opacity: 0;
   padding: 0 64px;
   margin: 0 auto;
@@ -449,11 +469,12 @@ footer {
 
 .footer-container {
   display: flex;
-  max-width: 1200px;
-  padding: 3rem 64px;
-  gap: 1rem;
   justify-content: space-between;
   align-items: center;
+  height: 6rem;
+  padding: 0 64px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .footer-container p {
@@ -476,6 +497,31 @@ footer {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.grid-overlay {
+  background-image: radial-gradient(#262626 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+.hero-bg-radial-container {
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+  opacity: 0.2;
+  /* plus whatever grid-overlay's background/pattern rules were */
+}
+
+.hero-bg-raial-blur {
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+  opacity: 0.1;
+  background: radial-gradient(
+    circle at 70% 30%,
+    rgb(0, 82, 255) 0%,
+    transparent 60%
+  );
+  filter: blur(80px);
 }
 
 .reveal {
