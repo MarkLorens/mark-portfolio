@@ -9,8 +9,8 @@
       href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <title>Mark Pardede - Full Stack Web Developer</title>
   </head>
   <body>
@@ -22,19 +22,19 @@
           <a class="navbar-container-list-item" href="#">Contact</a>
           <a class="navbar-container-list-item" href="#">Contract Work?</a>
           <!-- <a class="navbar-container-list-item" href="#">Mark</a> -->
-          <button
+          <a
             class="navbar-container-list-item highlighted text-label-mono"
-            href="#"
+            href="/resume.html"
           >
             Resume
-          </button>
+          </a>
         </div>
       </nav>
     </header>
     <main>
       <section id="Hero">
         <div class="grid-overlay hero-bg-radial-container">
-          <div class="hero-bg-raial-blur"></div>
+          <div class="hero-bg-radial-blur"></div>
         </div>
         <div class="hero-main">
           <p class="text-label-mono">Mark Pardede / Full Stack Web Developer</p>
@@ -50,12 +50,33 @@
       <section id="Terminal">
         <div class="terminal-container text-label-mono">
           <div class="terminal-nav-container">
-            <div class="terminal-nav-container-list">wa</div>
-            <div class="terminal-nav-container-list">mail</div>
-            <div class="terminal-nav-container-list">dsc</div>
+            <button
+              type="button"
+              class="terminal-nav-container-list"
+              data-cmd="wa"
+            >
+              wa
+            </button>
+            <button
+              type="button"
+              class="terminal-nav-container-list"
+              data-cmd="mail"
+            >
+              mail
+            </button>
+            <button
+              type="button"
+              class="terminal-nav-container-list"
+              data-cmd="dsc"
+            >
+              dsc
+            </button>
           </div>
-          <div class="terminal-body">
-            <p><span>whatsapp@10-64-36-199 ~ %</span> +(62)821-8144-6150</p>
+          <div class="terminal-body" id="TerminalBody">
+            <p>
+              <span>guest@10-64-36-199 ~ %</span
+              ><span class="hard-blink">|</span>
+            </p>
           </div>
         </div>
       </section>
