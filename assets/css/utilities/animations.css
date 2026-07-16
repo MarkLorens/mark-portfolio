@@ -1,0 +1,43 @@
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Scroll reveal. The hidden state is scoped to .js — set by an inline script
+   in <head> — so the page still renders if the module never loads. */
+.js [data-reveal] {
+  opacity: 0;
+}
+
+[data-reveal].is-revealed {
+  animation: fade-in-up 2s var(--ease-expo) var(--reveal-delay, 0s) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js [data-reveal] {
+    opacity: 1;
+  }
+
+  [data-reveal].is-revealed,
+  .terminal__cursor {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}

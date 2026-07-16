@@ -1,0 +1,35 @@
+.site-header {
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  background-color: var(--color-bg-blur);
+  border-bottom: var(--border-hairline);
+  backdrop-filter: blur(12px);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.nav__link {
+  color: var(--color-text-muted);
+  transition: color var(--duration-base) var(--ease-out);
+}
+
+.nav__link:hover {
+  color: var(--color-text);
+}
+
+.nav__link[aria-current="page"] {
+  color: var(--color-text);
+}

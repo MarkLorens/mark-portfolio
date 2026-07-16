@@ -1,0 +1,42 @@
+/* A single role entry. Kept as a component rather than a home-page style so
+   the resume page can reuse it. */
+
+.experience-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.experience-item__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.experience-item__title {
+  font-size: var(--text-xl);
+  line-height: var(--leading-snug);
+}
+
+.experience-item__period {
+  font-family: var(--font-mono);
+  color: var(--color-text-accent);
+}
+
+/* Wider tracking than .u-label, so this owns its full type spec. */
+.experience-item__stack {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.experience-item__body {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-muted);
+}

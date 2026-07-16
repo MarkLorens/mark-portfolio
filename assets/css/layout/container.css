@@ -1,0 +1,20 @@
+/* The single horizontal rhythm for the site: every top-level block gets
+   .container rather than repeating its own max-width and gutter. */
+
+.container {
+  max-width: var(--layout-max);
+  margin-inline: auto;
+  padding-inline: var(--layout-gutter);
+}
+
+.page {
+  padding-top: var(--header-height);
+}
+
+.divider {
+  max-width: var(--layout-max);
+  margin-block: var(--space-7);
+  margin-inline: auto;
+  border: var(--border-hairline);
+  opacity: 0.3;
+}

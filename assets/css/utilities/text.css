@@ -1,0 +1,11 @@
+/* The recurring "system readout" voice: mono, small, lightly tracked.
+   Used for eyebrows, timestamps, counts, buttons and terminal text.
+   Components needing wider tracking declare their own type instead. */
+
+.u-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+}

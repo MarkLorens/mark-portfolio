@@ -1,0 +1,26 @@
+/* The only stylesheet a page links to.
+   Order matters: later layers are meant to win over earlier ones, so
+   utilities come last. */
+
+/* 1. Base — tokens, resets, element defaults. */
+@import url("base/tokens.css");
+@import url("base/reset.css");
+
+/* 2. Layout — page scaffolding shared by every page. */
+@import url("layout/container.css");
+@import url("layout/header.css");
+@import url("layout/footer.css");
+
+/* 3. Components — reusable, page-agnostic blocks. */
+@import url("components/button.css");
+@import url("components/terminal.css");
+@import url("components/project-card.css");
+@import url("components/experience-item.css");
+
+/* 4. Pages — composition specific to one page. */
+@import url("pages/home.css");
+@import url("pages/resume.css");
+
+/* 5. Utilities — single-purpose overrides. */
+@import url("utilities/animations.css");
+@import url("utilities/text.css");

@@ -3,43 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Resume of Mark Pardede, full stack web developer." />
+    <script>
+      // Hides reveal targets before first paint so they can animate in.
+      // If the module never runs (file://, network error, syntax error) the
+      // load handler unhides them rather than leaving the page blank.
+      document.documentElement.classList.add("js");
+      addEventListener("load", function () {
+        if (!document.documentElement.dataset.revealReady) {
+          document.documentElement.classList.remove("js");
+        }
+      });
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script type="module" src="assets/js/main.js"></script>
     <title>Mark Lorens/Resume</title>
   </head>
   <body>
-    <header id="Navbar">
-      <nav class="navbar-container">
-        <div class="navbar-container-logo">Logo</div>
-        <div class="navbar-container-list">
-          <a class="navbar-container-list-item" href="#">Skills</a>
-          <a class="navbar-container-list-item" href="#">Contact</a>
-          <a class="navbar-container-list-item" href="#">Contract Work?</a>
-          <!-- <a class="navbar-container-list-item" href="#">Mark</a> -->
+    <header class="site-header">
+      <nav class="nav container">
+        <div class="nav__logo">Logo</div>
+        <div class="nav__list">
+          <a class="nav__link" href="index.html">Skills</a>
+          <a class="nav__link" href="index.html">Contact</a>
+          <a class="nav__link" href="index.html">Contract Work?</a>
           <a
-            class="navbar-container-list-item highlighted text-label-mono"
-            href="/resume.html"
+            class="btn btn--primary btn--sm u-label"
+            href="resume.html"
+            aria-current="page"
           >
             Resume
           </a>
         </div>
       </nav>
     </header>
-    <main>
-      <div id="ResumeContainer">
-        <div id="DownloadButton">
-          <button>
-            <span> Download </span>
-            PDF Export
+
+    <main class="page">
+      <section class="resume container" data-reveal>
+        <div class="resume__header">
+          <h1 class="resume__title">Resume</h1>
+          <button class="btn btn--primary u-label" type="button">
+            Download PDF Export
           </button>
         </div>
-      </div>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner container">
+        <div class="site-footer__logo">Logo</div>
+        <p class="site-footer__note">© 2026 MARK_PARDEDE. CREATE AND IMPROVE.</p>
+      </div>
+    </footer>
   </body>
 </html>

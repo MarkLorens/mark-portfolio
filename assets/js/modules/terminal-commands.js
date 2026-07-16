@@ -1,31 +1,6 @@
-const observerOptions = {
-  threshold: 0.4,
-};
+export const GUEST_HOST = "guest@10-64-36-199";
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("reveal");
-    }
-  });
-}, observerOptions);
-
-document.querySelectorAll("section").forEach((section) => {
-  section.classList.add("opacity-0");
-  observer.observe(section);
-});
-
-document.querySelectorAll(".group").forEach((card) => {
-  card.addEventListener("mousemove", (e) => {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    card.style.setProperty("--mouse-x", `${x}px`);
-    card.style.setProperty("--mouse-y", `${y}px`);
-  });
-});
-
-const COMMANDS = {
+export const COMMANDS = {
   wa: {
     host: "whatsapp@10-64-36-199",
     fakeLines: [
@@ -59,6 +34,7 @@ const COMMANDS = {
     ],
     result: "+(62)821-8144-6150",
   },
+
   mail: {
     host: "mail@10-64-36-199",
     fakeLines: [
@@ -71,7 +47,6 @@ const COMMANDS = {
       "[■■■■□□□□□□] 42%",
       "[■■■■■■■□□□] 71%",
       "[■■■■■■■■■■] 100%",
-      ,
       "",
       "EHLO localhost",
       "250 Hello.",
@@ -92,6 +67,7 @@ const COMMANDS = {
     ],
     result: "marklorens0705@gmail.com",
   },
+
   dsc: {
     host: "discord@10-64-36-199",
     fakeLines: [
@@ -121,61 +97,3 @@ const COMMANDS = {
     result: "aesrath",
   },
 };
-
-const LINE_DELAY_MS = 350;
-
-function init() {
-  const terminalBody = document.getElementById("TerminalBody");
-  const navButtons = document.querySelectorAll(".terminal-nav-container-list");
-
-  if (!terminalBody || navButtons.length === 0) return;
-
-  let isRunning = false;
-
-  navButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const cmd = COMMANDS[button.dataset.cmd];
-      if (!cmd || isRunning) return;
-      isRunning = true;
-
-      navButtons.forEach((b) => b.classList.remove("active"));
-      button.classList.add("active");
-
-      terminalBody.innerHTML = "";
-      runSequence(terminalBody, button.dataset.cmd, cmd, () => {
-        isRunning = false;
-      });
-    });
-  });
-}
-
-function runSequence(terminalBody, cmdName, cmd, onDone) {
-  const inputLine = document.createElement("p");
-  inputLine.innerHTML = `<span>guest@10-64-36-199 ~ %</span> contact:${cmdName} --lookup --forced`;
-  terminalBody.appendChild(inputLine);
-
-  let index = 0;
-
-  const printNextLine = () => {
-    if (index < cmd.fakeLines.length) {
-      const line = document.createElement("p");
-      line.className = "terminal-line-fake";
-      line.textContent = cmd.fakeLines[index];
-      terminalBody.appendChild(line);
-      index += 1;
-      terminalBody.scrollTop = terminalBody.scrollHeight;
-      setTimeout(printNextLine, LINE_DELAY_MS);
-      return;
-    }
-
-    const resultLine = document.createElement("p");
-    resultLine.innerHTML = `<span>${cmd.host} ~ %</span> ${cmd.result}`;
-    terminalBody.appendChild(resultLine);
-    terminalBody.scrollTop = terminalBody.scrollHeight;
-    onDone();
-  };
-
-  setTimeout(printNextLine, LINE_DELAY_MS);
-}
-
-document.addEventListener("DOMContentLoaded", init);
