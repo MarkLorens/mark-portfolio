@@ -1,20 +1,368 @@
-/* Placeholder layout — the resume body is still to be written. */
+/* Resume page — a document "sheet" floating on the site background.
+   Breakpoints follow the source design: 768px (md) and 1024px (lg). */
 
+/* .page already offsets the fixed header by --header-height; this tops it up
+   to the 128px the design asks for above the sheet. */
 .resume {
-  padding-block: var(--space-8);
+  padding-top: var(--space-7);
+  padding-bottom: var(--space-8);
 }
 
+.resume__sheet {
+  position: relative;
+  max-width: 900px;
+  margin-inline: auto;
+  padding: var(--space-5);
+  background-color: var(--color-surface);
+  border: var(--border-hairline);
+  box-shadow: 0 20px 50px rgb(0 0 0 / 0.3);
+}
+
+.resume__download {
+  position: absolute;
+  top: var(--space-5);
+  right: var(--space-5);
+}
+
+/* Header */
 .resume__header {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: var(--space-4);
   margin-bottom: var(--space-6);
 }
 
-.resume__title {
+.resume__name {
+  margin-bottom: var(--space-3);
   font-size: var(--text-2xl);
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.resume__contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2) var(--space-5);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+/* Stands in for the design's accent-coloured icons. */
+.resume__contact-key {
+  color: var(--color-text-accent);
+}
+
+.resume__rule {
+  margin-bottom: var(--space-6);
+  border: 0;
+  border-top: var(--border-hairline);
+}
+
+/* Two-column body */
+.resume__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+.resume__aside,
+.resume__main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.resume__aside-title {
+  margin-bottom: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-accent);
+}
+
+.resume__section-title {
+  padding-bottom: var(--space-2);
+  margin-bottom: var(--space-5);
+  border-bottom: var(--border-hairline);
+  font-size: var(--text-xl);
+  line-height: var(--leading-snug);
+}
+
+/* Sidebar blocks */
+.resume__entry-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.resume__entry-name {
+  margin-bottom: var(--space-1);
+  font-weight: 700;
+}
+
+.resume__entry-org {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.resume__entry-date {
+  font-size: var(--text-xs);
+  font-style: italic;
+  color: var(--color-text-subtle);
+}
+
+.resume__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.resume__lang-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* Experience entries */
+.resume__jobs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.resume-job {
+  padding-left: var(--space-4);
+  border-left: 2px solid var(--color-surface-raised);
+}
+
+.resume-job--current {
+  border-left-color: var(--color-brand);
+}
+
+.resume-job__header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--space-3);
+}
+
+/* Body font, not the headline face — the design sets these in Inter Bold. */
+.resume-job__title {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+
+.resume-job__stack {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  color: var(--color-text-accent);
+}
+
+.resume-job__period {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.resume-job__points {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: 0;
+  list-style: none;
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-muted);
+}
+
+.resume-job__point {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.resume-job__point::before {
+  content: "/";
+  flex-shrink: 0;
+  color: var(--color-text-accent);
+}
+
+/* Project entries */
+.resume__projects {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.resume-project {
+  padding: var(--space-4);
+  background-color: var(--color-bg-half);
+  border: var(--border-hairline);
+  transition: border-color var(--duration-base) var(--ease-out);
+}
+
+.resume-project:hover {
+  border-color: var(--color-text-accent);
+}
+
+.resume-project__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+.resume-project__title {
+  font-family: var(--font-body);
+  font-weight: 700;
+}
+
+.resume-project__badge {
+  flex-shrink: 0;
+  padding-inline: var(--space-2);
+  border: 1px solid var(--color-text-subtle);
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+}
+
+.resume-project__desc {
+  margin-bottom: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.resume-project__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-accent);
+}
+
+/* Sheet footer */
+.resume__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-top: var(--space-7);
+  padding-top: var(--space-5);
+  border-top: var(--border-hairline);
+  opacity: 0.5;
+  filter: grayscale(1);
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* Unwritten content. Deliberately loud so it can't ship by accident. */
+.resume__todo {
+  padding: var(--space-2);
+  border: 1px dashed var(--color-text-subtle);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-subtle);
+}
+
+.resume__todo--inline {
+  padding: 0 var(--space-1);
+  border-style: dashed;
+}
+
+@media (min-width: 768px) {
+  .resume__sheet {
+    padding: var(--space-7);
+  }
+
+  .resume__contact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .resume__grid {
+    grid-template-columns: 200px 1fr;
+  }
+
+  .resume-job__header {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--space-3);
+  }
+}
+
+@media (min-width: 1024px) {
+  .resume__contact {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media print {
+  .resume {
+    padding: 0;
+  }
+
+  .resume__sheet {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    border: 0;
+    box-shadow: none;
+    color: #000;
+  }
+
+  .resume__name,
+  .resume__entry-name,
+  .resume-job__title,
+  .resume-project__title,
+  .resume__section-title {
+    color: #000;
+  }
+
+  .resume__contact,
+  .resume__entry-org,
+  .resume-job__period,
+  .resume-job__points,
+  .resume-project__desc,
+  .resume__lang-list {
+    color: #374151;
+  }
+
+  .resume__contact-key,
+  .resume__aside-title,
+  .resume-job__stack,
+  .resume-project__tags,
+  .resume-job__point::before {
+    color: #000;
+  }
+
+  .resume__rule,
+  .resume__section-title,
+  .resume__meta,
+  .resume-project {
+    border-color: #e5e7eb;
+  }
+
+  .resume-job {
+    border-left-color: #e5e7eb;
+  }
+
+  .resume-project {
+    background: transparent;
+  }
+
+  .tag {
+    background: transparent;
+    border: 1px solid #e5e7eb;
+    color: #374151;
+  }
 }

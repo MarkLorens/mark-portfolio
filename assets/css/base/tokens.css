@@ -9,6 +9,7 @@
   --font-mono: "JetBrains Mono", monospace;
 
   /* Type scale */
+  --text-2xs: 0.625rem; /* 10px — technical micro-labels only */
   --text-xs: 0.75rem; /* 12px */
   --text-sm: 0.875rem; /* 14px */
   --text-md: 1rem; /* 16px */
@@ -28,6 +29,7 @@
   --color-bg-rgb: 17 19 28;
   --color-bg: rgb(var(--color-bg-rgb));
   --color-bg-blur: rgb(var(--color-bg-rgb) / 0.8);
+  --color-bg-half: rgb(var(--color-bg-rgb) / 0.5);
 
   --color-surface-sunken: rgb(12 14 23);
   --color-surface: rgb(25 27 37);
@@ -36,6 +38,7 @@
 
   --color-text: rgb(225 225 239);
   --color-text-muted: rgb(195 197 217);
+  --color-text-subtle: rgb(141 144 162);
   --color-text-accent: rgb(183 196 255);
   --color-text-on-brand: rgb(223 227 255);
 
@@ -56,7 +59,7 @@
 
   /* Layout */
   --layout-max: 1200px;
-  --layout-gutter: var(--space-7);
+  --layout-gutter: 20px; /* widened to --space-7 (64px) at the md breakpoint */
   --layout-gap: var(--space-4);
   --header-height: var(--space-7);
   --footer-height: 6rem;
@@ -70,4 +73,12 @@
 
   /* Borders */
   --border-hairline: 1px solid var(--color-border);
+}
+
+/* The source design carries both a mobile and a desktop page margin
+   (20px / 64px). A fixed 64px gutter eats a third of a 375px screen. */
+@media (min-width: 768px) {
+  :root {
+    --layout-gutter: var(--space-7);
+  }
 }

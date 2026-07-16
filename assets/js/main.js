@@ -3,6 +3,8 @@
 
 import { initReveal } from "./modules/reveal.js";
 import { initTerminal } from "./modules/terminal.js";
+import { initPrint } from "./modules/print.js";
 
 initReveal();
 initTerminal();
+initPrint();

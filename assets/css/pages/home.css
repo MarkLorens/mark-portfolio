@@ -8,8 +8,6 @@
   padding-block: var(--space-9);
 }
 
-/* Both backdrops resolve against the initial containing block, not .hero —
-   they intentionally cover the first viewport and scroll away with it. */
 .hero__backdrop {
   position: absolute;
   inset: 0;
@@ -32,7 +30,6 @@
   filter: blur(80px);
 }
 
-/* Wider tracking than .u-label, so this owns its full type spec. */
 .hero__eyebrow {
   font-family: var(--font-mono);
   font-size: var(--text-sm);

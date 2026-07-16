@@ -1,0 +1,16 @@
+/* The bracketed "[ React ]" chip, shared by project cards and the resume
+   stack list. */
+
+.tag {
+  padding: var(--space-1) var(--space-2);
+  background-color: var(--color-surface-raised);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.tag--caps {
+  text-transform: uppercase;
+}

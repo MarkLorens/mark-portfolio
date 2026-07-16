@@ -1,0 +1,22 @@
+/* Global print behaviour. Page-specific print rules live with their page. */
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  /* Scroll-reveal hides sections until the observer fires. Printing must never
+     depend on that having happened, or the sheet comes out blank. */
+  .js [data-reveal] {
+    opacity: 1 !important;
+  }
+
+  [data-reveal].is-revealed {
+    animation: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+}

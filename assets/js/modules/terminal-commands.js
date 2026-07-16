@@ -32,7 +32,7 @@ export const COMMANDS = {
       "Formatting response...",
       "Done.",
     ],
-    result: "+(62)821-8144-6150",
+    result: "+(65)870-4273",
   },
 
   mail: {

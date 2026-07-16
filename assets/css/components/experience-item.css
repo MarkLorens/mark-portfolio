@@ -1,6 +1,3 @@
-/* A single role entry. Kept as a component rather than a home-page style so
-   the resume page can reuse it. */
-
 .experience-item {
   display: flex;
   flex-direction: column;

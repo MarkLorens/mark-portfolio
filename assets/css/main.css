@@ -13,6 +13,7 @@
 
 /* 3. Components — reusable, page-agnostic blocks. */
 @import url("components/button.css");
+@import url("components/tag.css");
 @import url("components/terminal.css");
 @import url("components/project-card.css");
 @import url("components/experience-item.css");
@@ -24,3 +25,4 @@
 /* 5. Utilities — single-purpose overrides. */
 @import url("utilities/animations.css");
 @import url("utilities/text.css");
+@import url("utilities/print.css");
