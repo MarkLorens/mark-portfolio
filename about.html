@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="About Mark Pardede — full stack web developer based in Bali, Indonesia."
+    />
+    <script>
+      document.documentElement.classList.add("js");
+      addEventListener("load", function () {
+        if (!document.documentElement.dataset.revealReady) {
+          document.documentElement.classList.remove("js");
+        }
+      });
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script type="module" src="assets/js/main.js"></script>
+    <title>Mark Pardede - About Me</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container">
+        <a class="nav__logo" href="index.html" aria-label="Mark Pardede — home">
+          <img src="assets/img/Logo.svg" alt="Mark Pardede" />
+        </a>
+        <div class="nav__list">
+          <a class="nav__link" href="index.html">Home</a>
+          <a class="nav__link" href="index.html">Projects</a>
+          <a class="nav__link" href="index.html">Contract Work?</a>
+          <a class="nav__link" href="about.html" aria-current="page">About</a>
+          <a class="nav__link" href="#contact">Contact</a>
+          <a class="btn btn--primary btn--sm u-label" href="resume.html">
+            Resume
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page">
+      <section class="about container" data-reveal>
+        <div class="about__hero">
+          <div class="about__portrait">
+            <img src="assets/img/portrait.png" alt="Portrait of Mark Pardede" />
+            <span class="about__badge u-label">MARK_PARDEDE</span>
+          </div>
+          <div class="about__intro">
+            <p class="about__role">
+              Full Stack Web Developer — Bali, Indonesia
+            </p>
+            <h1 class="about__name">About Me</h1>
+            <p class="about__lede">
+              Hello — I'm Mark Pardede. I build websites and web apps end to
+              end, from the design system to deployment. My favorite projects
+              are ones that directly help my clients thrive. From company
+              profile for exposure or landing page to ease their work.
+            </p>
+          </div>
+        </div>
+
+        <div class="about__prose">
+          <p>
+            I discovered that I loved technology when I was first introduced to
+            SQL in high school. We still had to use Command Prompt to access it
+            back then. But my journey started in 2016
+          </p>
+          <p>
+            I got into Singapore's Republic Polytechnic and undertook a study
+            for a Diploma in Information Technology. Studying alone abroad at
+            the age of 18 was exciting as much as it was challenging. I finished
+            my study in 2019 after a quick internship with NEC. But my interest
+            in web development hasn't stopped since
+          </p>
+          <p>
+            Now, I'm undertaking a program with Apple Developer Academy in Bali,
+            creating apps from the ground up with fellow learners with empathy
+            in mind.
+          </p>
+          <p>
+            In parallel I take on freelance work. I rebuilt the business website
+            for
+            <a href="https://selatmalaka.id" target="_blank" rel="noopener"
+              >Selat Malaka Indonesia</a
+            >
+            with a modern design and SEO in mind, improving page performance by
+            30% — and I'm currently building
+            <a
+              href="https://settlesmart.netlify.app/"
+              target="_blank"
+              rel="noopener"
+              >SettleSmart</a
+            >, a financial-advisory site with Firebase-backed client inquiries.
+          </p>
+          <p>
+            When the IDE is off, however, I enjoy learning about various things
+            through vidoes, writing fictional things, and tinkering in Godot
+            (Also an IDE, but, you know)
+          </p>
+
+          <p>
+            If you'd like to build something together,
+            <a href="#contact">get in touch</a>.
+          </p>
+        </div>
+
+        <h2 class="about__section-title">What I Do</h2>
+        <div class="about__specialties">
+          <article class="about-card">
+            <span class="about-card__key">Web</span>
+            <h3 class="about-card__title">Full-Stack Web Development</h3>
+            <p class="about-card__desc">
+              React, Astro, Vue and ASP.NET — from static marketing sites to
+              data-backed client applications.
+            </p>
+          </article>
+          <article class="about-card">
+            <span class="about-card__key">Apple</span>
+            <h3 class="about-card__title">Apple Ecosystem</h3>
+            <p class="about-card__desc">
+              Swift and Apple frameworks at the Apple Developer Academy —
+              projects taken from ideation to MVP.
+            </p>
+          </article>
+          <article class="about-card">
+            <span class="about-card__key">Client</span>
+            <h3 class="about-card__title">Freelance &amp; Client Work</h3>
+            <p class="about-card__desc">
+              Business sites shipped for real clients, with SEO, performance and
+              responsiveness as core requirements.
+            </p>
+          </article>
+          <article class="about-card">
+            <span class="about-card__key">Tools</span>
+            <h3 class="about-card__title">Beyond the Browser</h3>
+            <p class="about-card__desc">
+              SQL, Firebase, C#, Git and Figma — plus game-engine tinkering in
+              Unity and Godot.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="site-footer__inner container">
+        <div class="site-footer__brand">MARK_PARDEDE</div>
+        <nav class="site-footer__links" aria-label="Contact">
+          <a
+            class="site-footer__link"
+            href="https://wa.me/6587304273"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="site-footer__link-key">WhatsApp</span>
+          </a>
+          <a class="site-footer__link" href="mailto:marklorens0705@gmail.com">
+            <span class="site-footer__link-key">Mail</span>
+          </a>
+          <a
+            class="site-footer__link"
+            href="discord://-/users/311474445032095755"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="site-footer__link-key">Discord</span>
+          </a>
+        </nav>
+        <p class="site-footer__note">
+          © 2026 MARK_PARDEDE. CREATE AND IMPROVE.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

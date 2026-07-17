@@ -133,6 +133,45 @@
   gap: var(--layout-gap);
 }
 
+/* Skills */
+.skills__title {
+  margin-bottom: var(--space-6);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-accent);
+}
+
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--layout-gap);
+  padding: 0;
+  list-style: none;
+}
+
+/* 10 tiles: 2x5 on small, 5x2 on desktop — both divide evenly, so no
+   orphan row. */
+@media (min-width: 768px) {
+  .skills__grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+/* The rest of the stack has no mark worth faking (HTML/CSS/JS is three logos
+   or none; Razor Pages and SQL have none), so it stays in the tag idiom. */
+.skills__extra {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-5);
+  padding: 0;
+  list-style: none;
+}
+
 /* Call to action */
 .cta {
   padding-block: var(--space-8);

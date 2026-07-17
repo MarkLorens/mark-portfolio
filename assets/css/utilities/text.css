@@ -5,3 +5,17 @@
   line-height: 1.4;
   letter-spacing: 0.05em;
 }
+
+/* Unwritten content. Deliberately loud so it can't ship by accident.
+   (Same treatment as .resume__todo; use this one on new pages.) */
+.u-todo {
+  padding: var(--space-2);
+  border: 1px dashed var(--color-text-subtle);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-subtle);
+}
+
+.u-todo--inline {
+  padding: 0 var(--space-1);
+}
