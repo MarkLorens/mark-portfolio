@@ -1,6 +1,6 @@
 import { COMMANDS, GUEST_HOST } from "./terminal-commands.js";
 
-const LINE_DELAY_MS = 350;
+const LINE_DELAY_MS = 75;
 
 export function initTerminal() {
   const body = document.querySelector("[data-terminal-body]");

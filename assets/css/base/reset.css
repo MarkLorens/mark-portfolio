@@ -7,6 +7,12 @@
 
 html {
   scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+/* Anchor targets clear the fixed header when scrolled to. */
+:target {
+  scroll-margin-top: var(--header-height);
 }
 
 body {

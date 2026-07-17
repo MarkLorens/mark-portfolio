@@ -33,9 +33,10 @@
       <nav class="nav container">
         <div class="nav__logo">Logo</div>
         <div class="nav__list">
-          <a class="nav__link" href="#">Skills</a>
-          <a class="nav__link" href="#">Contact</a>
+          <a class="nav__link" href="#">Home</a>
+          <a class="nav__link" href="#">Projects</a>
           <a class="nav__link" href="#">Contract Work?</a>
+          <a class="nav__link" href="#contact">Contact</a>
           <a class="btn btn--primary btn--sm u-label" href="resume.html">
             Resume
           </a>
@@ -60,6 +61,14 @@
 
       <section id="terminal" class="terminal-section container" data-reveal>
         <div class="terminal u-label">
+          <div class="terminal__titlebar">
+            <div class="terminal__dots" aria-hidden="true">
+              <span class="terminal__dot"></span>
+              <span class="terminal__dot"></span>
+              <span class="terminal__dot"></span>
+            </div>
+            <span class="terminal__title">Fetch Contact</span>
+          </div>
           <div class="terminal__tabs">
             <button type="button" class="terminal__tab" data-cmd="wa">
               wa
@@ -192,10 +201,33 @@
       </section>
     </main>
 
-    <footer class="site-footer">
+    <footer id="contact" class="site-footer">
       <div class="site-footer__inner container">
-        <div class="site-footer__logo">Logo</div>
-        <p class="site-footer__note">© 2026 MARK_PARDEDE. CREATE AND IMPROVE.</p>
+        <div class="site-footer__brand">MARK_PARDEDE</div>
+        <nav class="site-footer__links" aria-label="Contact">
+          <a
+            class="site-footer__link"
+            href="https://wa.me/6587304273"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="site-footer__link-key">WhatsApp</span>
+          </a>
+          <a class="site-footer__link" href="mailto:marklorens0705@gmail.com">
+            <span class="site-footer__link-key">Mail</span>
+          </a>
+          <a
+            class="site-footer__link"
+            href="discord://-/users/311474445032095755"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="site-footer__link-key">Discord</span>
+          </a>
+        </nav>
+        <p class="site-footer__note">
+          © 2026 MARK_PARDEDE. CREATE AND IMPROVE.
+        </p>
       </div>
     </footer>
   </body>

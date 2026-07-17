@@ -4,9 +4,54 @@
 
 .site-footer__inner {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  height: var(--footer-height);
+  gap: var(--space-4);
+  min-height: var(--footer-height);
+  padding-block: var(--space-4);
+}
+
+.site-footer__brand {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--color-text);
+}
+
+/* Contact channels */
+.site-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3) var(--space-5);
+}
+
+.site-footer__link {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.site-footer__link-key {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-accent);
+}
+
+.site-footer__link-value {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  transition: color var(--duration-base) var(--ease-out);
+}
+
+/* Only the anchors are interactive; the Discord handle is display-only. */
+a.site-footer__link:hover .site-footer__link-value {
+  color: var(--color-text);
 }
 
 .site-footer__note {
