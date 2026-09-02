@@ -1,0 +1,46 @@
+/* Shared brand tokens + reset for the "choose your path" pages
+   (landing.html, game-dev.html). Both personas live outside the core site's
+   design system (assets/css/main.css) — this is their own small system.
+   Link this file ALONGSIDE landing.css/game-dev.css, before it. */
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: #0b0d10;
+}
+
+:root {
+  /* Matches the core site's --layout-gutter breakpoint exactly (768px),
+     so the page edge reads the same whichever "side" you're on. */
+  --gutter: 20px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 64px;
+  }
+}
+
+:root {
+  --landing-bg: #0b0d10;
+  --landing-ink: #e8ecf1;
+  --landing-muted: #68757f;
+  --landing-secondary: #9aa7b4;
+  --landing-dim: #c3ccd6;
+  --landing-cyan: #6fd8ff;
+  --landing-gold: #ffd166;
+  --landing-on-cyan: #08272f;
+  --landing-on-gold: #2b1f00;
+  --landing-line: rgba(255, 255, 255, 0.09);
+  --landing-font-head: "Bricolage Grotesque", sans-serif;
+  --landing-font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --landing-font-head-web: "Archivo Narrow", sans-serif;
+  --landing-web-blue: #0052ff;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}

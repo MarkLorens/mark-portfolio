@@ -1,0 +1,282 @@
+/* Landing — dual-portfolio gate page (Game developer / Web developer).
+   Tokens/reset are shared with game-dev.html via persona-shared.css (link
+   that file first); this stylesheet is just the split-panel layout. */
+
+.landing,
+.landing * {
+  box-sizing: border-box;
+}
+
+.landing {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--landing-bg);
+  color: var(--landing-ink);
+  font-family: var(--landing-font-mono);
+  animation: landing-rise-in 0.7s ease both;
+}
+
+@keyframes landing-rise-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing {
+    animation: none;
+  }
+}
+
+.landing-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.landing-panel__grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Web panel only — stands in for the gold glow the game panel uses (gold
+   isn't part of the web persona's own palette). Logo.svg's own background
+   rect (#121212) sits close enough to --landing-bg (#0b0d10) that at this
+   opacity it disappears into the panel rather than reading as a tile. */
+.landing-panel__mark {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("../../img/Logo.svg");
+  background-repeat: no-repeat;
+  background-position: 80% 50%;
+  background-size: clamp(220px, 30vw, 420px) auto;
+  opacity: 0.01;
+  transition: opacity 0.4s ease;
+}
+
+.landing-panel--web:hover .landing-panel__mark,
+.landing-panel--web:focus-visible .landing-panel__mark {
+  opacity: 0.11;
+}
+
+.landing-panel__content {
+  position: relative;
+}
+
+.landing-panel__title {
+  margin: 0;
+  font-family: var(--landing-font-head);
+  font-weight: 800;
+  font-size: clamp(38px, 5vw, 88px);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: var(--landing-ink);
+  text-wrap: balance;
+}
+
+/* Respective typography: the web panel borrows its headline treatment
+   verbatim from the core site's .hero__title (assets/css/pages/home.css),
+   not Bricolage's display tightening — same size range so the layout
+   doesn't shift, different face/weight/tracking so it reads as itself. */
+.landing-panel--web .landing-panel__title {
+  font-family: var(--landing-font-head-web);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02rem;
+}
+
+.landing-panel__stats {
+  display: flex;
+  flex-direction: column;
+}
+
+.landing-stat {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 11px 0;
+  font-size: 13px;
+  border-top: 1px solid var(--landing-line);
+}
+
+.landing-stat__label {
+  color: var(--landing-muted);
+}
+
+.landing-stat__value {
+  color: var(--landing-dim);
+}
+
+/* Gold marks the one standout stat per panel — independent of which side's
+   own accent (cyan/gold) that panel otherwise uses. */
+.landing-stat__value--highlight {
+  color: var(--landing-gold);
+}
+
+.landing-panel__cta {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 20px 0 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.landing-panel--game .landing-panel__cta {
+  color: var(--landing-cyan);
+}
+
+.landing-panel--web .landing-panel__cta {
+  color: var(--landing-web-blue);
+}
+
+/* Desktop: full-bleed diagonal split, hover-revealed stats. */
+@media (min-width: 769px) {
+  .landing-panel {
+    position: absolute;
+    inset: 0;
+    transition:
+      background 0.4s ease,
+      opacity 0.4s ease;
+  }
+
+  .landing-panel--game {
+    align-items: flex-start;
+    clip-path: polygon(0 0, 63% 0, 37% 100%, 0 100%);
+    background:
+      radial-gradient(
+        760px 520px at 22% 50%,
+        rgba(111, 216, 255, 0.055),
+        transparent 72%
+      ),
+      var(--landing-bg);
+  }
+
+  .landing-panel--game:hover,
+  .landing-panel--game:focus-visible {
+    background:
+      radial-gradient(
+        760px 520px at 22% 50%,
+        rgba(111, 216, 255, 0.149),
+        transparent 72%
+      ),
+      var(--landing-bg);
+  }
+
+  .landing-panel--web {
+    align-items: flex-end;
+    clip-path: polygon(63.2% 0, 100% 0, 100% 100%, 37.2% 100%);
+    background: var(--landing-bg);
+  }
+
+  /* No hover background swap here — the logo mark's opacity transition
+     (.landing-panel__mark, above) is this panel's equivalent of the game
+     panel's glow-on-hover. */
+
+  /* Cross-panel dim: set by landing.js on the container, so it degrades
+     gracefully (each panel's own hover/focus effects above still work)
+     if the script fails to load. */
+  .landing[data-hover="game"] .landing-panel--web,
+  .landing[data-hover="web"] .landing-panel--game {
+    opacity: 0.42;
+  }
+
+  .landing-panel__content {
+    width: 42%;
+    min-width: 280px;
+    padding: 0 24px 0 clamp(32px, 5vw, 80px);
+  }
+
+  .landing-panel--web .landing-panel__content {
+    padding: 0 clamp(32px, 5vw, 80px) 0 24px;
+    text-align: right;
+  }
+
+  .landing-panel__stats {
+    margin-top: 18px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition:
+      max-height 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 0.32s ease,
+      transform 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+      margin-top 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .landing-panel:hover .landing-panel__stats,
+  .landing-panel:focus-visible .landing-panel__stats {
+    margin-top: 36px;
+    max-height: 240px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .landing-panel__stats {
+      transition: opacity 0.2s ease;
+    }
+  }
+
+  .landing-panel--web .landing-panel__cta {
+    justify-content: flex-end;
+  }
+}
+
+/* Mobile/tablet: the diagonal split relies on a 42%-wide content column
+   inside a clip-path'd ancestor — below ~667px that column's 280px
+   min-width overflows its clipped region and the heading gets visibly cut
+   off. Stack instead: two full-width panels, stats always shown since
+   touch has no hover to gate them on. */
+@media (max-width: 768px) {
+  .landing {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  .landing-panel {
+    position: relative;
+    align-items: flex-start;
+    min-height: 50vh;
+    padding: 48px 24px;
+    background: var(--landing-bg);
+  }
+
+  .landing-panel__content {
+    width: 100%;
+  }
+
+  .landing-panel__stats {
+    margin-top: 24px;
+  }
+
+  .landing-panel--web .landing-panel__cta {
+    justify-content: flex-start;
+  }
+
+  /* Content is left-aligned and full-width here (no diagonal seam to work
+     around) — push the mark right, behind the empty space rather than
+     under the text. */
+  .landing-panel__mark {
+    background-position: 92% 65%;
+    background-size: clamp(160px, 55vw, 260px) auto;
+  }
+}

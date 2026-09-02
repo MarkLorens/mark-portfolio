@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mark Pardede — game developer. Godot, gameplay systems, three shipped games."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/pages/persona-shared.css" />
+    <link rel="stylesheet" href="assets/css/pages/game-dev.css" />
+    <script type="module" src="assets/js/modules/game-dev.js"></script>
+    <title>Mark Pardede — Game Developer</title>
+  </head>
+  <body>
+    <div class="gamedev">
+      <div class="gamedev__grid" aria-hidden="true"></div>
+
+      <div class="gamedev__container">
+        <header class="gamedev__header">
+          <a class="gamedev__logo" href="landing.html">
+            <span class="gamedev__logo-prefix">res://</span>
+            <span class="gamedev__logo-name">gamedev.portfolio</span>
+          </a>
+          <nav class="gamedev__nav">
+            <a href="#work">work</a>
+            <a href="#about">about</a>
+            <a href="#stack">stack</a>
+            <a href="#contact">contact</a>
+          </nav>
+        </header>
+
+        <section class="gamedev__hero">
+          <div class="gamedev__left">
+            <div class="gamedev__badge">
+              <span class="gamedev__badge-dot"></span>
+              Gameplay / Engine Developer
+            </div>
+            <h1 class="gamedev__title">
+              Mark
+              <span class="gamedev__title-accent">Pardede </span><br />
+            </h1>
+            <div class="gamedev__actions">
+              <a class="gamedev-btn gamedev-btn--solid" href="#work"
+                >see the games →</a
+              >
+              <a class="gamedev-btn gamedev-btn--outline" href="resume.html"
+                >résumé ↓</a
+              >
+            </div>
+          </div>
+
+          <div class="gamedev__inspector">
+            <div class="gamedev__inspector-head">
+              <span class="gamedev__inspector-dot"></span> inspector
+            </div>
+            <div class="gamedev__inspector-body">
+              <div class="gamedev__inspector-row">
+                <span>engine</span><span>Godot 4</span>
+              </div>
+              <div class="gamedev__inspector-row">
+                <span>focus</span><span>gameplay · engine</span>
+              </div>
+              <div class="gamedev__inspector-row">
+                <span>shipped</span><span>3 games</span>
+              </div>
+              <div class="gamedev__inspector-row">
+                <span>jams</span><span>2 placed</span>
+              </div>
+              <div class="gamedev__inspector-row">
+                <span>WIP</span><span>2 games</span>
+              </div>
+              <div class="gamedev__inspector-row gamedev__inspector-row--gold">
+                <span>on store</span><span>App Store ×1</span>
+              </div>
+              <div class="gamedev__inspector-row gamedev__inspector-row--cyan">
+                <span>status</span><span>available</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="work" class="gamedev-section gamedev-section--work">
+          <div class="gamedev-section__head">
+            <h2 class="gamedev-section__title">Selected work</h2>
+            <span class="gamedev-section__hint">click a row to expand</span>
+          </div>
+
+          <article class="gamedev-case">
+            <button
+              class="gamedev-case__row"
+              type="button"
+              data-case-toggle="1"
+              aria-expanded="true"
+            >
+              <span class="gamedev-case__index">01</span>
+              <span>
+                <h3 class="gamedev-case__title">Fira's Pursuit</h3>
+                <p class="gamedev-case__hook">
+                  Auto-runner where you swap between three forms mid-stride,
+                  each with one ability, to survive what's coming.
+                </p>
+              </span>
+              <span class="gamedev-case__meta">
+                <span class="gamedev-case__badge gamedev-case__badge--gold"
+                  >Top 60 · GameSeed ID</span
+                >
+                <span class="gamedev-case__sign" data-case-sign>−</span>
+              </span>
+            </button>
+            <div class="gamedev-case__detail is-open" data-case-detail="1">
+              <div class="gamedev-case__col">
+                <div>
+                  <div
+                    class="gamedev-case__eyebrow gamedev-case__eyebrow--cyan"
+                  >
+                    the problem
+                  </div>
+                  <p class="gamedev-case__text">
+                    Creating a mobile game with a Childlike-Wonder theme. We
+                    wanted to exhibit the freedom of carefreely running with
+                    fantasy abilities; while making sure each obstacle isn't
+                    <em>tied</em> to one form and ability.
+                  </p>
+                </div>
+                <div>
+                  <div
+                    class="gamedev-case__eyebrow gamedev-case__eyebrow--cyan"
+                  >
+                    how it's built
+                  </div>
+                  <p class="gamedev-case__text">
+                    A form-state machine in Godot 4 with shared collision and
+                    per-form ability nodes, so adding a fourth form is a
+                    resource file rather than a refactor. Obstacles are hand
+                    drawn to not allow one-form-one-solution gameplay. The game
+                    is a mix between "fast-paced QTE" feel and puzzle solving.
+                    Some obstacles offer different pathway if the player is
+                    willing to look. Or try
+                  </p>
+                </div>
+                <div>
+                  <div
+                    class="gamedev-case__eyebrow gamedev-case__eyebrow--gold"
+                  >
+                    what I learned
+                  </div>
+                  <p class="gamedev-case__text">
+                    Input buffering isn't polish, it's the whole game.
+                    Responsive instant transformation allows players to express
+                    their skills in ways we never thought of during testing.
+                  </p>
+                  <br />
+                  <p class="gamedev-case__text">
+                    There's also the importance of difficulty scaling. Making a
+                    more complex course doesn't guarantee difficulty, neither
+                    does difficulty immediately translates to fun.
+                  </p>
+                </div>
+                <div class="gamedev-case__tags">
+                  <span class="gamedev-case__tag">Godot 4</span>
+                  <span class="gamedev-case__tag">GDScript</span>
+                  <span class="gamedev-case__tag">State Machines</span>
+                  <span class="gamedev-case__tag">Team of 6: 3 weeks</span>
+                </div>
+              </div>
+              <div class="gamedev-case__media">
+                <div class="gamedev-figure" style="aspect-ratio: 16 / 9">
+                  <img
+                    src="/assets/img/firaspursuit/My Movie.mp4"
+                    alt="Fira's Pursuit Banner GIF"
+                    style="width: 100%; height: 100%; object-fit: cover"
+                  />
+                </div>
+                <div class="gamedev-case__media-row">
+                  <div class="gamedev-figure" style="aspect-ratio: 4 / 3">
+                    <img
+                      src="/assets/img/firaspursuit/FiraGameplay.png"
+                      alt="Fira's Pursuit Frog Jumping Screenshot"
+                      style="width: 100%; height: 100%; object-fit: cover"
+                    />
+                  </div>
+                  <div class="gamedev-figure" style="aspect-ratio: 4 / 3">
+                    <img
+                      src="/assets/img/firaspursuit/FirasArmadilo.png"
+                      alt="Fira's Pursuit Armadilo Blocking Arrow Screenshot"
+                      style="width: 100%; height: 100%; object-fit: cover"
+                    />
+                  </div>
+                </div>
+                <a
+                  class="gamedev-case__link gamedev-todo"
+                  href="https://seedacademy.itch.io/firas-pursuit"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >play / watch the build →</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="gamedev-case">
+            <button
+              class="gamedev-case__row"
+              type="button"
+              data-case-toggle="2"
+              aria-expanded="false"
+            >
+              <span class="gamedev-case__index">02</span>
+              <span>
+                <h3 class="gamedev-case__title">Cowboy Shooters — Bang Bang</h3>
+                <p class="gamedev-case__hook">
+                  A western duel where your iPhone <em>is</em> the revolver.
+                  Draw, aim, fire with the phone. Fastest slinger wins
+                </p>
+              </span>
+              <span class="gamedev-case__meta">
+                <span class="gamedev-case__badge gamedev-case__badge--cyan"
+                  >live on the App Store</span
+                >
+                <span class="gamedev-case__sign" data-case-sign>+</span>
+              </span>
+            </button>
+            <div class="gamedev-case__detail" data-case-detail="2">
+              <div class="gamedev-case__col">
+                <div>
+                  <div
+                    class="gamedev-case__eyebrow gamedev-case__eyebrow--cyan"
+                  >
+                    the problem
+                  </div>
+                  <p class="gamedev-case__text">
+                    Two phones, no server, and a duel decided by who moves
+                    first. The real problem isn't UI, it's fairness under
+                    network latency — if each phone decides "I fired first" on
+                    its own, whoever has the faster network wins, not whoever
+                    has the faster reflexes. No backend to lean on, either.
+                  </p>
+                </div>
+                <div>
+                  <div
+                    class="gamedev-case__eyebrow gamedev-case__eyebrow--cyan"
+                  >
+                    how it's built
+                  </div>
+                  <p class="gamedev-case__text">
+                    The fix is a host-as-referee model — one phone is the single
+                    source of truth for timing, the other renders what it
+                    decides, so there's only one clock that matters. It runs on
+                    raw Network + Bonjour rather than MultipeerConnectivity,
+                    trading a hand-rolled wire protocol for tight control over a
+                    strict two-peer pairing. The draw reads through CoreMotion;
+                    the trigger binds to the volume button, not a touch target,
+                    since reaching for the screen breaks the gun illusion.
+                  </p>
+                </div>
+                <div>
+                  <div
+                    class="gamedev-case__eyebrow gamedev-case__eyebrow--gold"
+                  >
+                    what I learned
+                  </div>
+                  <p class="gamedev-case__text">
+                    Fairness turned out to be a design problem before a
+                    networking one — the fix wasn't optimizing latency, it was
+                    picking one authority and no longer trying to reconcile two
+                    independent judges.
+                  </p>
+                  <br />
+                  <p class="gamedev-case__text">
+                    Mixing UI frameworks is fine when the seam matches a real
+                    difference in what each is good at — SwiftUI for menus,
+                    SpriteKit for the duel, not an inconsistency.
+                  </p>
+                </div>
+                <div class="gamedev-case__tags">
+                  <span class="gamedev-case__tag">iOS</span>
+                  <span class="gamedev-case__tag">Network + Bonjour</span>
+                  <span class="gamedev-case__tag">SwiftUI · SpriteKit</span>
+                  <span class="gamedev-case__tag">CoreMotion</span>
+                  <span class="gamedev-case__tag">Combine</span>
+                  <span class="gamedev-case__tag">Team of 6: 3 weeks</span>
+                </div>
+              </div>
+              <div class="gamedev-case__media">
+                <div class="gamedev-figure" style="aspect-ratio: 16 / 9">
+                  <img
+                    src="/assets/img/cowboybb/CowboyBBDemo.mov"
+                    alt="Cowboy Bang Bang Demo Video"
+                    style="width: 100%; height: 100%; object-fit: cover"
+                  />
+                </div>
+                <div class="gamedev-case__media-row">
+                  <div class="gamedev-figure" style="aspect-ratio: 4 / 3">
+                    <img
+                      src="/assets/img/cowboybb/CowboyBBDuelReady.PNG"
+                      alt="Cowboy Bang Bang Duel Ready Screen"
+                      style="width: 100%; height: 100%; object-fit: cover"
+                    />
+                  </div>
+                  <div class="gamedev-figure" style="aspect-ratio: 4 / 3">
+                    <img
+                      src="/assets/img/cowboybb/CowboyBBVictory.PNG"
+                      alt="Cowboy Bang Bang Victory Screen"
+                      style="width: 100%; height: 100%; object-fit: cover"
+                    />
+                  </div>
+                </div>
+                <a
+                  href="https://apps.apple.com/id/app/cowboy-shooter-bang-bang/id6786577343"
+                  class="gamedev-case__link gamedev-todo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >view on the App Store →</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="gamedev-case">
+            <button
+              class="gamedev-case__row"
+              type="button"
+              data-case-toggle="3"
+              aria-expanded="false"
+            >
+              <span class="gamedev-case__index">03</span>
+              <span>
+                <h3 class="gamedev-case__title">Entrophy</h3>
+                <p class="gamedev-case__hook">
+                  A petri-dish sim. Every bacteria culture wants to eat the
+                  others; your job is to keep all of them alive anyway.
+                </p>
+              </span>
+              <span class="gamedev-case__meta">
+                <span class="gamedev-case__badge gamedev-case__badge--gold"
+                  >21st · IGI Game Jam</span
+                >
+                <span class="gamedev-case__sign" data-case-sign>+</span>
+              </span>
+            </button>
+            <div class="gamedev-case__detail" data-case-detail="3">
+              <div class="gamedev-case__col">
+                <div>
+                  <div
+                    class="gamedev-case__eyebrow gamedev-case__eyebrow--cyan"
+                  >
+                    the problem
+                  </div>
+                  <p class="gamedev-case__text">
+                    The brief was one question: how do you get an ecosystem to
+                    feel organic without hand-scripting what each creature does
+                    every frame? It needed several genuinely different species
+                    sharing enough machinery that adding a sixth would alter the
+                    environment just enough.
+                  </p>
+                </div>
+                <div>
+                  <div
+                    class="gamedev-case__eyebrow gamedev-case__eyebrow--cyan"
+                  >
+                    how it's built
+                  </div>
+                  <p class="gamedev-case__text">
+                    Every cell shares one base class carrying separation, wander
+                    and containment; each species overrides exactly one method,
+                    _steering(), and inherits everything else, that's the whole
+                    extensibility story. The single shared lever is a static
+                    temperature float every species answers to differently: one
+                    moves faster in the cold, another dies past a threshold, a
+                    third just swells. A Godot quirk sat underneath it all:
+                    deleted cells linger until the frame ends, so two predators
+                    could both claim the same prey.
+                  </p>
+                </div>
+                <div>
+                  <div
+                    class="gamedev-case__eyebrow gamedev-case__eyebrow--gold"
+                  >
+                    what I learned
+                  </div>
+                  <p class="gamedev-case__text">
+                    A shared base class earns its keep when subclasses only ever
+                    add, never subtract — every species needed separation,
+                    wander and containment, none needed to turn any of them off.
+                  </p>
+                  <br />
+                  <p class="gamedev-case__text">
+                    One well-chosen shared variable can carry more design depth
+                    than a dozen bespoke systems — the temperature dial is just
+                    a float, but because each species interprets it differently,
+                    it produces cascading, ecosystem-wide consequences a much
+                    bigger simulation would usually need to fake.
+                  </p>
+                </div>
+                <div class="gamedev-case__tags">
+                  <span class="gamedev-case__tag">Godot 4</span>
+                  <span class="gamedev-case__tag">GDScript</span>
+                  <span class="gamedev-case__tag">Data-Driven Resources</span>
+                  <span class="gamedev-case__tag"
+                    >Game Design from Pure Numbers</span
+                  >
+                  <span class="gamedev-case__tag">Team of 3: 72h</span>
+                </div>
+              </div>
+              <div class="gamedev-case__media">
+                <div class="gamedev-figure" style="aspect-ratio: 16 / 9">
+                  <img
+                    src="/assets/img/entropy/EntropyGif.gif"
+                    alt="Entropy Gameplay Gif"
+                    style="width: 100%; height: 100%; object-fit: cover"
+                  />
+                </div>
+                <div class="gamedev-case__media-row">
+                  <div class="gamedev-figure" style="aspect-ratio: 4 / 3">
+                    <img
+                      src="/assets/img/entropy/EntropyFullDish.png"
+                      alt="Entropy with a Crowded Petri Dish"
+                      style="width: 100%; height: 100%; object-fit: cover"
+                    />
+                  </div>
+                  <div class="gamedev-figure" style="aspect-ratio: 4 / 3">
+                    <img
+                      src="/assets/img/entropy/EntropyGameOver.png"
+                      alt="Entropy Game Over Screen"
+                      style="width: 100%; height: 100%; object-fit: cover"
+                    />
+                  </div>
+                </div>
+                <a
+                  href="https://aesrath.itch.io/entropy"
+                  class="gamedev-case__link gamedev-todo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >play the jam build →</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="gamedev-case gamedev-case--wip">
+            <div class="gamedev-case__row">
+              <span class="gamedev-case__index">04</span>
+              <span>
+                <h3 class="gamedev-case__title">Pathoria — in progress</h3>
+                <p class="gamedev-case__hook">
+                  Isometric puzzle game to highlight the how employees in a
+                  wheelchair are not completely hopeless in an office
+                </p>
+              </span>
+              <span class="gamedev-case__badge gamedev-case__badge--wip"
+                >WIP</span
+              >
+            </div>
+          </article>
+          <article class="gamedev-case gamedev-case--wip">
+            <div class="gamedev-case__row">
+              <span class="gamedev-case__index">05</span>
+              <span>
+                <h3 class="gamedev-case__title">
+                  Actual Last War - in progress
+                </h3>
+                <p class="gamedev-case__hook">
+                  A remake to the dubious "fake ads" on YouTube from Last
+                  Survival. I just want to play the game they're showing in the
+                  ads and not the actual city building game
+                </p>
+              </span>
+              <span class="gamedev-case__badge gamedev-case__badge--wip"
+                >WIP</span
+              >
+            </div>
+          </article>
+        </section>
+
+        <section id="about" class="gamedev-section gamedev__about">
+          <div>
+            <h2 class="gamedev-subhead">About</h2>
+            <div class="gamedev__bio">
+              <p>
+                I first tinkered with Godot a long time ago, when a friend
+                invited me to a game jam. At that point, I didn't even know what
+                a "game jam" or "godot" is, but I arrived at a YouTube tutorial
+                anyway. We ended up never submitting due to our very limited
+                expertise in game development. But I got my first taste in
+                making a game, and I've been thinking about it since.
+              </p>
+              <p>
+                Though my journey took me to web and mobile development, just
+                recently, I got an opportunity to create something with a team
+                of people who shared the same passion. Getting to finally
+                deliver something that I made, in the crowd of a cafe, to
+                someone's hand was nothing short of satisfying.
+              </p>
+              <p>
+                This time, game development got me by the throat. I could not
+                stop. From Pathoria, to Fira's Pursuit, to Cowboy Shooters -
+                Bang Bang, I just can't satisfy the urge to make more.
+              </p>
+              <p>
+                I don't have studio credits or formal training. What I do have
+                is the thirst to create, and I'm told that's rarer than it
+                should be.
+              </p>
+            </div>
+          </div>
+          <div>
+            <h2 class="gamedev-subhead">Competitions</h2>
+            <div class="gamedev__awards">
+              <div class="gamedev__award">
+                <span class="gamedev__award-rank gamedev__award-rank--gold"
+                  >60</span
+                >
+                <span>
+                  <div class="gamedev__award-title">GameSeed Indonesia</div>
+                  <div class="gamedev__award-sub">Top 60 · Fira's Pursuit</div>
+                </span>
+                <span class="gamedev__award-tag">national</span>
+              </div>
+              <div class="gamedev__award">
+                <span class="gamedev__award-rank gamedev__award-rank--gold"
+                  >TBD</span
+                >
+                <span>
+                  <div class="gamedev__award-title">IGI Game Jam</div>
+                  <div class="gamedev__award-sub">
+                    Under Review · Fira's Pursuit
+                  </div>
+                </span>
+                <span class="gamedev__award-tag">national</span>
+              </div>
+              <div class="gamedev__award">
+                <span class="gamedev__award-rank gamedev__award-rank--gold"
+                  >21</span
+                >
+                <span>
+                  <div class="gamedev__award-title">IGI Game Jam</div>
+                  <div class="gamedev__award-sub">21st place · Entrophy</div>
+                </span>
+                <span class="gamedev__award-tag">72h</span>
+              </div>
+              <div class="gamedev__award">
+                <span class="gamedev__award-rank gamedev__award-rank--cyan"
+                  >1</span
+                >
+                <span>
+                  <div class="gamedev__award-title">App Store release</div>
+                  <div class="gamedev__award-sub">
+                    Cowboy Shooters — Bang Bang
+                  </div>
+                </span>
+                <span class="gamedev__award-tag">live</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="stack" class="gamedev-section">
+          <h2 class="gamedev-subhead">Stack</h2>
+          <div class="gamedev__stack-grid">
+            <div class="gamedev__stack-col">
+              <div class="gamedev__stack-col-title">engine</div>
+              <div class="gamedev__stack-col-list">
+                <span>Godot 4</span><span>GDScript</span>
+                <span>custom resources</span><span>scene composition</span>
+              </div>
+            </div>
+            <div class="gamedev__stack-col">
+              <div class="gamedev__stack-col-title">gameplay</div>
+              <div class="gamedev__stack-col-list">
+                <span>state machines</span><span>input buffering</span>
+                <span>procedural spawning</span><span>game feel tuning</span>
+              </div>
+            </div>
+            <div class="gamedev__stack-col">
+              <div class="gamedev__stack-col-title">systems</div>
+              <div class="gamedev__stack-col-list">
+                <span>fixed-tick simulation</span><span>agent pools</span>
+                <span>data-driven balance</span><span>profiling</span>
+              </div>
+            </div>
+            <div class="gamedev__stack-col">
+              <div class="gamedev__stack-col-title">platform</div>
+              <div class="gamedev__stack-col-list">
+                <span>iOS &amp; device motion</span
+                ><span>store submission</span> <span>Git</span
+                ><span>jam-speed scoping</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="gamedev-section">
+          <div class="gamedev__contact-card">
+            <div class="gamedev__contact-grid">
+              <div>
+                <h2 class="gamedev__contact-title">
+                  Need someone who finishes things?
+                </h2>
+                <p class="gamedev__contact-lede">
+                  Junior gameplay or engine roles, contract work, or a jam team
+                  that needs a systems person. I reply faster than I should.
+                </p>
+                <div class="gamedev__contact-links">
+                  <a href="mailto:marklorens0705@gmail.com"
+                    >marklorens0705@gmail.com</a
+                  >
+                  <span class="gamedev-todo">itch.io / games</span>
+                  <a
+                    href="https://github.com/MarkLorens"
+                    target="_blank"
+                    rel="noopener"
+                    >github / source</a
+                  >
+                </div>
+              </div>
+              <form class="gamedev__form" data-gamedev-form>
+                <input placeholder="your name" />
+                <input placeholder="email" />
+                <textarea
+                  placeholder="what are you building?"
+                  rows="4"
+                ></textarea>
+                <button type="submit">send it</button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <footer class="gamedev__footer">
+          <span>built in a text editor, like the games</span>
+          <span>© 2026</span>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
