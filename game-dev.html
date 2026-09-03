@@ -562,38 +562,52 @@
         </section>
 
         <section id="stack" class="gamedev-section">
-          <h2 class="gamedev-subhead">Stack</h2>
-          <div class="gamedev__stack-grid">
-            <div class="gamedev__stack-col">
-              <div class="gamedev__stack-col-title">engine</div>
-              <div class="gamedev__stack-col-list">
-                <span>Godot 4</span><span>GDScript</span>
-                <span>custom resources</span><span>scene composition</span>
-              </div>
-            </div>
-            <div class="gamedev__stack-col">
-              <div class="gamedev__stack-col-title">gameplay</div>
-              <div class="gamedev__stack-col-list">
-                <span>state machines</span><span>input buffering</span>
-                <span>procedural spawning</span><span>game feel tuning</span>
-              </div>
-            </div>
-            <div class="gamedev__stack-col">
-              <div class="gamedev__stack-col-title">systems</div>
-              <div class="gamedev__stack-col-list">
-                <span>fixed-tick simulation</span><span>agent pools</span>
-                <span>data-driven balance</span><span>profiling</span>
-              </div>
-            </div>
-            <div class="gamedev__stack-col">
-              <div class="gamedev__stack-col-title">platform</div>
-              <div class="gamedev__stack-col-list">
-                <span>iOS &amp; device motion</span
-                ><span>store submission</span> <span>Git</span
-                ><span>jam-speed scoping</span>
-              </div>
-            </div>
+          <div class="gamedev-section__head">
+            <h2 class="gamedev-section__title">Stack</h2>
+            <span class="gamedev-section__hint">Tech I've tried</span>
           </div>
+          <ul class="gamedev__stack-grid">
+            <li class="gamedev-tech-tile">
+              <img
+                class="gamedev-tech-tile__logo"
+                src="assets/img/techlogo/godot.svg"
+                alt=""
+                width="40"
+                height="40"
+              />
+              <span class="gamedev-tech-tile__name">Godot</span>
+            </li>
+            <li class="gamedev-tech-tile">
+              <img
+                class="gamedev-tech-tile__logo gamedev-tech-tile__logo--invert"
+                src="assets/img/techlogo/unity.svg"
+                alt=""
+                width="40"
+                height="40"
+              />
+              <span class="gamedev-tech-tile__name">Unity</span>
+            </li>
+            <li class="gamedev-tech-tile">
+              <img
+                class="gamedev-tech-tile__logo"
+                src="assets/img/techlogo/aseprite.png"
+                alt=""
+                width="40"
+                height="40"
+              />
+              <span class="gamedev-tech-tile__name">Aseprite</span>
+            </li>
+            <li class="gamedev-tech-tile">
+              <img
+                class="gamedev-tech-tile__logo"
+                src="assets/img/techlogo/spritekit.png"
+                alt=""
+                width="40"
+                height="40"
+              />
+              <span class="gamedev-tech-tile__name">SpriteKit</span>
+            </li>
+          </ul>
         </section>
 
         <section id="contact" class="gamedev-section">
@@ -623,7 +637,7 @@
                 <input placeholder="your name" />
                 <input placeholder="email" />
                 <textarea
-                  placeholder="what are you building?"
+                  placeholder="what's on your mind?"
                   rows="4"
                 ></textarea>
                 <button type="submit">send it</button>

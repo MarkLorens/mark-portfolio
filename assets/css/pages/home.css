@@ -153,11 +153,11 @@
   list-style: none;
 }
 
-/* 10 tiles: 2x5 on small, 5x2 on desktop — both divide evenly, so no
+/* 8 tiles: 2x4 on small, 4x2 on desktop — both divide evenly, so no
    orphan row. */
 @media (min-width: 768px) {
   .skills__grid {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
