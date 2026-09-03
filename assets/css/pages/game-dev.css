@@ -785,7 +785,7 @@
 }
 
 .gamedev__form button:hover {
-  background: var(--landing-gold);
+  background: #ffffff;
   color: var(--landing-on-gold);
 }
 
@@ -798,6 +798,20 @@
   font-size: 12px;
   color: var(--landing-muted);
   letter-spacing: 0.08em;
+}
+
+.site-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 3rem;
+}
+
+.site-footer__link-key {
+  transition: color 0.2s ease;
+}
+
+.site-footer__link-key:hover {
+  color: var(--landing-cyan);
 }
 
 /* Responsive */
