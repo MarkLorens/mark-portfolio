@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mark Pardede — full stack web developer. Selected work, experience and contact."
+    />
+    <script>
+      document.documentElement.classList.add("js");
+      addEventListener("load", function () {
+        if (!document.documentElement.dataset.revealReady) {
+          document.documentElement.classList.remove("js");
+        }
+      });
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script type="module" src="assets/js/main.js"></script>
+    <title>Mark Pardede - Full Stack Web Developer</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container">
+        <a class="nav__logo" href="index.html" aria-label="Back to landing">
+          <span class="nav__logo-prefix">res://</span>
+          <span class="nav__logo-name">webdev.portfolio</span>
+        </a>
+        <div class="nav__list">
+          <a class="nav__link" href="#">Home</a>
+          <!-- <a class="nav__link" href="#">Projects</a>
+          <a class="nav__link" href="#">Contract Work?</a> -->
+          <a class="nav__link" href="about.html">About</a>
+          <a class="nav__link" href="#contact">Contact</a>
+          <a class="btn btn--primary btn--sm u-label" href="resume.html">
+            Resume
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page">
+      <section id="hero" class="hero container" data-reveal>
+        <div class="hero__backdrop">
+          <div class="hero__glow"></div>
+        </div>
+        <div class="hero__main">
+          <p class="hero__eyebrow">Front-End / Full Stack Web Developer</p>
+          <h1 class="hero__title">Mark<span>Pardede</span></h1>
+        </div>
+      </section>
+
+      <section id="terminal" class="terminal-section container" data-reveal>
+        <div class="terminal u-label">
+          <div class="terminal__titlebar">
+            <div class="terminal__dots" aria-hidden="true">
+              <span class="terminal__dot"></span>
+              <span class="terminal__dot"></span>
+              <span class="terminal__dot"></span>
+            </div>
+            <span class="terminal__title">Fetch Contact</span>
+          </div>
+          <div class="terminal__tabs">
+            <button type="button" class="terminal__tab" data-cmd="wa">
+              wa
+            </button>
+            <button type="button" class="terminal__tab" data-cmd="mail">
+              mail
+            </button>
+            <button type="button" class="terminal__tab" data-cmd="dsc">
+              dsc
+            </button>
+          </div>
+          <div class="terminal__body" data-terminal-body>
+            <p>
+              <span class="terminal__prompt">guest@10-64-36-199 ~ %</span
+              ><span class="terminal__cursor">|</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <section id="experience" class="experience container" data-reveal>
+        <div class="experience__aside">
+          <h2 class="experience__title">Experience</h2>
+        </div>
+        <div class="experience__list">
+          <article class="experience-item">
+            <div class="experience-item__header">
+              <h3 class="experience-item__title">Apple Developer Academy</h3>
+              <span class="experience-item__period u-label"
+                >MAR 2026 - PRESENT</span
+              >
+            </div>
+            <p class="experience-item__stack">Swift / Apple Frameworks</p>
+            <p class="experience-item__body">
+              First hand experience working with Apple ecosystem
+            </p>
+          </article>
+
+          <div class="experience__divider"></div>
+
+          <article class="experience-item">
+            <div class="experience-item__header">
+              <h3 class="experience-item__title">AQUAMETRO Pte Ltd</h3>
+              <span class="experience-item__period u-label">2019 - 2020</span>
+            </div>
+            <p class="experience-item__stack">ASP.NET / Razor Pages</p>
+            <p class="experience-item__body">
+              Built a company profile with SOI in mind
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- <hr class="divider" /> -->
+
+      <!-- <section id="projects" class="projects container" data-reveal>
+        <div class="projects__header">
+          <h2 class="projects__title">Selected Work</h2>
+          <span class="projects__count u-label">003 cases</span>
+        </div>
+        <div class="projects__grid">
+          <article class="project-card">
+            <div class="project-card__thumb"></div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Nexus UI Kit</h3>
+              <p class="project-card__desc">
+                A high-performance React component library built with Tailwind
+                CSS and Framer Motion for enterprise-grade applications.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag">[ React ]</span>
+                <span class="tag">[ Tailwind ]</span>
+              </div>
+              <a class="project-card__link u-label" href="#">
+                VIEW PROJECT <span aria-hidden="true">></span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__thumb"></div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Nexus UI Kit</h3>
+              <p class="project-card__desc">
+                A high-performance React component library built with Tailwind
+                CSS and Framer Motion for enterprise-grade applications.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag">[ React ]</span>
+                <span class="tag">[ Tailwind ]</span>
+              </div>
+              <a class="project-card__link u-label" href="#">
+                VIEW PROJECT <span aria-hidden="true">></span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__thumb"></div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Nexus UI Kit</h3>
+              <p class="project-card__desc">
+                A high-performance React component library built with Tailwind
+                CSS and Framer Motion for enterprise-grade applications.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag">[ React ]</span>
+                <span class="tag">[ Tailwind ]</span>
+              </div>
+              <a class="project-card__link u-label" href="#">
+                VIEW PROJECT <span aria-hidden="true">></span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section> -->
+
+      <hr class="divider" />
+
+      <section id="skills" class="skills container" data-reveal>
+        <h2 class="skills__title">Core Stack</h2>
+        <ul class="skills__grid">
+          <li class="tech-tile">
+            <img
+              class="tech-tile__logo"
+              src="assets/img/techlogo/react.svg"
+              alt=""
+              width="40"
+              height="40"
+            />
+            <span class="tech-tile__name">React</span>
+          </li>
+          <li class="tech-tile">
+            <img
+              class="tech-tile__logo"
+              src="assets/img/techlogo/vue.svg"
+              alt=""
+              width="40"
+              height="40"
+            />
+            <span class="tech-tile__name">Vue</span>
+          </li>
+          <li class="tech-tile">
+            <img
+              class="tech-tile__logo"
+              src="assets/img/techlogo/astro.svg"
+              alt=""
+              width="40"
+              height="40"
+            />
+            <span class="tech-tile__name">Astro</span>
+          </li>
+          <li class="tech-tile">
+            <img
+              class="tech-tile__logo"
+              src="assets/img/techlogo/tailwind.svg"
+              alt=""
+              width="40"
+              height="40"
+            />
+            <span class="tech-tile__name">Tailwind</span>
+          </li>
+          <li class="tech-tile">
+            <img
+              class="tech-tile__logo"
+              src="assets/img/techlogo/dotnet.svg"
+              alt=""
+              width="40"
+              height="40"
+            />
+            <span class="tech-tile__name">.NET / C#</span>
+          </li>
+          <li class="tech-tile">
+            <img
+              class="tech-tile__logo"
+              src="assets/img/techlogo/firebase.svg"
+              alt=""
+              width="40"
+              height="40"
+            />
+            <span class="tech-tile__name">Firebase</span>
+          </li>
+          <li class="tech-tile">
+            <img
+              class="tech-tile__logo"
+              src="assets/img/techlogo/git.svg"
+              alt=""
+              width="40"
+              height="40"
+            />
+            <span class="tech-tile__name">Git</span>
+          </li>
+          <li class="tech-tile">
+            <img
+              class="tech-tile__logo"
+              src="assets/img/techlogo/figma.svg"
+              alt=""
+              width="40"
+              height="40"
+            />
+            <span class="tech-tile__name">Figma</span>
+          </li>
+          <li class="tech-tile">
+            <img
+              class="tech-tile__logo tech-tile__logo--invert"
+              src="assets/img/techlogo/unity.svg"
+              alt=""
+              width="40"
+              height="40"
+            />
+            <span class="tech-tile__name">Unity</span>
+          </li>
+          <li class="tech-tile">
+            <img
+              class="tech-tile__logo"
+              src="assets/img/techlogo/godot.svg"
+              alt=""
+              width="40"
+              height="40"
+            />
+            <span class="tech-tile__name">Godot</span>
+          </li>
+        </ul>
+      </section>
+
+      <hr class="divider" />
+
+      <section id="cta" class="cta container" data-reveal>
+        <div class="cta__inner">
+          <h2 class="cta__title">LET'S BUILD YOUR NEXT BIG THING</h2>
+          <div class="cta__actions">
+            <a
+              class="btn btn--primary u-label"
+              href="https://wa.me/6587304273"
+              target="_blank"
+              rel="noopener"
+              >Initiate_contact</a
+            >
+            <a
+              class="btn u-label"
+              href="https://github.com/MarkLorens"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View_Github</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="site-footer__inner container">
+        <div class="site-footer__brand">MARK_PARDEDE</div>
+        <nav class="site-footer__links" aria-label="Contact">
+          <a
+            class="site-footer__link"
+            href="https://wa.me/6587304273"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="site-footer__link-key">WhatsApp</span>
+          </a>
+          <a class="site-footer__link" href="mailto:marklorens0705@gmail.com">
+            <span class="site-footer__link-key">Mail</span>
+          </a>
+          <a
+            class="site-footer__link"
+            href="discord://-/users/311474445032095755"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="site-footer__link-key">Discord</span>
+          </a>
+        </nav>
+        <p class="site-footer__note">
+          © 2026 MARK_PARDEDE. CREATE AND IMPROVE.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

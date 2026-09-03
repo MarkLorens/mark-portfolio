@@ -1,5 +1,5 @@
 /* Shared brand tokens + reset for the "choose your path" pages
-   (landing.html, game-dev.html). Both personas live outside the core site's
+   (index.html, game-dev.html). Both personas live outside the core site's
    design system (assets/css/main.css) — this is their own small system.
    Link this file ALONGSIDE landing.css/game-dev.css, before it. */
 

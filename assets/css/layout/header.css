@@ -18,7 +18,7 @@
 /* res://-style wordmark — same structure as the game-dev persona's own
    logo (assets/css/pages/game-dev.css .gamedev__logo), rendered in this
    site's own font/accent rather than shared markup, so it still "belongs"
-   to this palette. Always points back to the persona gate, landing.html. */
+   to this palette. Always points back to the persona gate, index.html. */
 .nav__logo {
   display: flex;
   align-items: baseline;
