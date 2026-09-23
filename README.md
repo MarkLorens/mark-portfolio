@@ -1,6 +1,6 @@
 # Portfolio Website
 
-My personal portfolio website showcasing eperience, and journey as a full-stack web developer.
+My personal portfolio website showcasing my experience and journey as a full-stack web developer.
 
 The website serves as a central place to learn more about me, view my resume, and get in touch.
 
