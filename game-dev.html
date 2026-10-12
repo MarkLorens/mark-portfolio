@@ -120,14 +120,21 @@
                   <div
                     class="gamedev-case__eyebrow gamedev-case__eyebrow--cyan"
                   >
-                    the problem
+                    My Role
                   </div>
-                  <p class="gamedev-case__text">
-                    Creating a mobile game with a Childlike-Wonder theme. We
-                    wanted to exhibit the freedom of carefreely running with
-                    fantasy abilities; while making sure each obstacle isn't
-                    <em>tied</em> to one form and ability.
-                  </p>
+                  <ul class="gamedev-case__text">
+                    <li>
+                      Managing the form resource: their abilities, interactions,
+                      and stats.
+                    </li>
+                    <li>
+                      Tilemap: hand-drawing the levels, and collisions and
+                      parallax background.
+                    </li>
+                    <li>
+                      Obstacles: Turrets, dropping and non-dropping spikes.
+                    </li>
+                  </ul>
                 </div>
                 <div>
                   <div
@@ -172,11 +179,15 @@
               </div>
               <div class="gamedev-case__media">
                 <div class="gamedev-figure" style="aspect-ratio: 16 / 9">
-                  <img
-                    src="assets/img/firaspursuit/My Movie.mp4"
-                    alt="Fira's Pursuit Banner GIF"
+                  <video
+                    src="assets/img/firaspursuit/My%20Movie.mp4"
+                    aria-label="Fira's Pursuit Banner GIF"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
                     style="width: 100%; height: 100%; object-fit: cover"
-                  />
+                  ></video>
                 </div>
                 <div class="gamedev-case__media-row">
                   <div class="gamedev-figure" style="aspect-ratio: 4 / 3">
@@ -233,15 +244,15 @@
                   <div
                     class="gamedev-case__eyebrow gamedev-case__eyebrow--cyan"
                   >
-                    the problem
+                    my role
                   </div>
-                  <p class="gamedev-case__text">
-                    Two phones, no server, and a duel decided by who moves
-                    first. The real problem isn't UI, it's fairness under
-                    network latency — if each phone decides "I fired first" on
-                    its own, whoever has the faster network wins, not whoever
-                    has the faster reflexes. No backend to lean on, either.
-                  </p>
+                  <ul class="gamedev-case__text">
+                    <li>
+                      Connectivity: Bonjour multipeer & Apple Network framework
+                    </li>
+                    <li>Countdown: NTP-style clock synchronization.</li>
+                    <li>Leaderboard: Gamecenter access point.</li>
+                  </ul>
                 </div>
                 <div>
                   <div
@@ -290,11 +301,15 @@
               </div>
               <div class="gamedev-case__media">
                 <div class="gamedev-figure" style="aspect-ratio: 16 / 9">
-                  <img
-                    src="assets/img/cowboybb/CowboyBBDemo.mov"
-                    alt="Cowboy Bang Bang Demo Video"
+                  <video
+                    data-src="assets/img/cowboybb/CowboyBBDemo.mp4"
+                    aria-label="Cowboy Bang Bang Demo Video"
+                    preload="none"
+                    muted
+                    loop
+                    playsinline
                     style="width: 100%; height: 100%; object-fit: cover"
-                  />
+                  ></video>
                 </div>
                 <div class="gamedev-case__media-row">
                   <div class="gamedev-figure" style="aspect-ratio: 4 / 3">
@@ -351,15 +366,13 @@
                   <div
                     class="gamedev-case__eyebrow gamedev-case__eyebrow--cyan"
                   >
-                    the problem
+                    my role
                   </div>
-                  <p class="gamedev-case__text">
-                    The brief was one question: how do you get an ecosystem to
-                    feel organic without hand-scripting what each creature does
-                    every frame? It needed several genuinely different species
-                    sharing enough machinery that adding a sixth would alter the
-                    environment just enough.
-                  </p>
+                  <ul class="gamedev-case__text">
+                    <li>Solo developer</li>
+                    <li>Flock & predator behaviors</li>
+                    <li>Ability and temperature HUD functionality</li>
+                  </ul>
                 </div>
                 <div>
                   <div
@@ -444,7 +457,142 @@
             </div>
           </article>
 
-          <article class="gamedev-case gamedev-case--wip">
+          <article class="gamedev-case">
+            <button
+              class="gamedev-case__row"
+              type="button"
+              data-case-toggle="4"
+              aria-expanded="false"
+            >
+              <span class="gamedev-case__index">04</span>
+              <span>
+                <h3 class="gamedev-case__title">Space Opurrator</h3>
+                <p class="gamedev-case__hook">
+                  A co-op game where two players share their POV. If one swipes
+                  to the left, the other player swipes along with them.
+                </p>
+              </span>
+              <span class="gamedev-case__meta">
+                <span class="gamedev-case__badge gamedev-case__badge--gold"
+                  >TBD · Very Disco - Apple Developer Academy Game Jam</span
+                >
+                <span class="gamedev-case__sign" data-case-sign>+</span>
+              </span>
+            </button>
+            <div class="gamedev-case__detail" data-case-detail="4">
+              <div class="gamedev-case__col">
+                <div>
+                  <div
+                    class="gamedev-case__eyebrow gamedev-case__eyebrow--cyan"
+                  >
+                    my role
+                  </div>
+                  <ul class="gamedev-case__text">
+                    <li>
+                      Button placement randomizer: ensures every button spawn is
+                      random but still solvable.
+                    </li>
+                    <li>
+                      Gestures: custom bar and gesture detection for the game's
+                      "tools".
+                    </li>
+                    <li>
+                      Levels as resources: creating a new level is a simple
+                      drag-and-drop of which buttons and tools may spawn.
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <div
+                    class="gamedev-case__eyebrow gamedev-case__eyebrow--cyan"
+                  >
+                    how it's built
+                  </div>
+                  <p class="gamedev-case__text">
+                    The cockpit is one strip four screens wide, and each phone
+                    is only a window onto part of it. Both phones share a single
+                    camera position over the local network, so a swipe on one
+                    drags the view on both — the jam's "compact" theme isn't
+                    just art direction, it's the netcode. Each level is a
+                    resource listing which buttons and tools are allowed to
+                    spawn; the randomizer scatters them across the cockpit and
+                    makes sure the target's code can still be entered from
+                    wherever everything landed. Tools layer their own gesture
+                    detection on top of plain taps, so later levels ask for more
+                    than just pressing buttons.
+                  </p>
+                </div>
+                <div>
+                  <div
+                    class="gamedev-case__eyebrow gamedev-case__eyebrow--gold"
+                  >
+                    what I learned
+                  </div>
+                  <p class="gamedev-case__text">
+                    Randomness is only fun when it's fair. A purely random
+                    layout will eventually deal an impossible cockpit, and in a
+                    timed co-op game players don't blame the RNG — they blame
+                    each other. Guaranteeing solvability up front is what makes
+                    the chaos feel earned.
+                  </p>
+                  <br />
+                  <p class="gamedev-case__text">
+                    Turning levels into data paid off immediately. Once a level
+                    was just a list of what's allowed to spawn, our designers
+                    could tune the difficulty curve themselves without touching
+                    code, and balancing became a design conversation instead of
+                    a dev task.
+                  </p>
+                </div>
+                <div class="gamedev-case__tags">
+                  <span class="gamedev-case__tag">iOS</span>
+                  <span class="gamedev-case__tag">Local Multiplayer</span>
+                  <span class="gamedev-case__tag">Godot 4</span>
+                  <span class="gamedev-case__tag">GDScript</span>
+                  <span class="gamedev-case__tag">Data-Driven Levels</span>
+                  <span class="gamedev-case__tag">Team of 6</span>
+                </div>
+              </div>
+              <div class="gamedev-case__media">
+                <div class="gamedev-figure" style="aspect-ratio: 16 / 9">
+                  <video
+                    data-src="assets/img/spaceopurrator/SpaceOpurrator.mp4"
+                    aria-label="Space Opurrator Gameplay Video"
+                    preload="none"
+                    muted
+                    loop
+                    playsinline
+                    style="width: 100%; height: 100%; object-fit: cover"
+                  ></video>
+                </div>
+                <div class="gamedev-case__media-row">
+                  <div class="gamedev-figure" style="aspect-ratio: 4 / 3">
+                    <img
+                      src="assets/img/spaceopurrator/SpaceOpurratorSplash.PNG"
+                      alt="Space Opurrator Splash Screen"
+                      style="width: 100%; height: 100%; object-fit: cover"
+                    />
+                  </div>
+                  <div class="gamedev-figure" style="aspect-ratio: 4 / 3">
+                    <img
+                      src="assets/img/spaceopurrator/SpaceOpurratorGameOver.png"
+                      alt="Space Opurrator Game Over Screen"
+                      style="width: 100%; height: 100%; object-fit: cover"
+                    />
+                  </div>
+                </div>
+                <a
+                  href="https://seedacademy.itch.io/space-opurrator-game"
+                  class="gamedev-case__link gamedev-todo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >play the jam build →</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- <article class="gamedev-case gamedev-case--wip">
             <div class="gamedev-case__row">
               <span class="gamedev-case__index">04</span>
               <span>
@@ -476,7 +624,7 @@
                 >WIP</span
               >
             </div>
-          </article>
+          </article>-->
         </section>
 
         <section id="about" class="gamedev-section gamedev__about">
@@ -503,11 +651,6 @@
                 stop. From Pathoria, to Fira's Pursuit, to Cowboy Shooters -
                 Bang Bang, I just can't satisfy the urge to make more.
               </p>
-              <p>
-                I don't have studio credits or formal training. What I do have
-                is the thirst to create, and I'm told that's rarer than it
-                should be.
-              </p>
             </div>
           </div>
           <div>
@@ -525,12 +668,12 @@
               </div>
               <div class="gamedev__award">
                 <span class="gamedev__award-rank gamedev__award-rank--gold"
-                  >TBD</span
+                  >12</span
                 >
                 <span>
-                  <div class="gamedev__award-title">IGI Game Jam</div>
+                  <div class="gamedev__award-title">Indie Game Ignite</div>
                   <div class="gamedev__award-sub">
-                    Under Review · Fira's Pursuit
+                    Top 12 Finalist · Fira's Pursuit
                   </div>
                 </span>
                 <span class="gamedev__award-tag">national</span>
@@ -545,6 +688,9 @@
                 </span>
                 <span class="gamedev__award-tag">72h</span>
               </div>
+            </div>
+            <h2 class="gamedev-subhead">Shipped</h2>
+            <div class="gamedev__awards">
               <div class="gamedev__award">
                 <span class="gamedev__award-rank gamedev__award-rank--cyan"
                   >1</span
@@ -564,7 +710,7 @@
         <section id="stack" class="gamedev-section">
           <div class="gamedev-section__head">
             <h2 class="gamedev-section__title">Stack</h2>
-            <span class="gamedev-section__hint">Tech I've tried</span>
+            <span class="gamedev-section__hint">Tech I use</span>
           </div>
           <ul class="gamedev__stack-grid">
             <li class="gamedev-tech-tile">

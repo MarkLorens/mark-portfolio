@@ -488,6 +488,25 @@
   text-wrap: pretty;
 }
 
+ul.gamedev-case__text {
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+}
+
+ul.gamedev-case__text li {
+  position: relative;
+  padding-left: 18px;
+}
+
+ul.gamedev-case__text li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--landing-cyan);
+}
+
 .gamedev-case__text em {
   font-style: normal;
   color: var(--landing-ink);
@@ -625,6 +644,10 @@
   align-items: baseline;
   padding: 18px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.gamedev__awards + .gamedev-subhead {
+  margin-top: 48px;
 }
 
 .gamedev__award:last-child {
